@@ -32,6 +32,15 @@ Functional.vue renders a input field to enter the username to be requested by Gi
 Test.vue will render hyperlinks to the unit tests source code and results.
 
 
+
+## Tests
+
+Mocha + Chai + Sinon
+
+See [Unit Tests](https://github.com/jeffersonroth/jr-rauxa-gh/tree/master/tests/unit).
+
+
+
 ## Backend
 
 In order to host the app to Heroku, a Express server were created.
