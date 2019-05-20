@@ -55,12 +55,6 @@
                             </div>
                         </div>
                     </v-card-title>
-                    <v-card-actions>
-                        <div class="text-xs-center">
-                            <v-chip id="profile">
-                            </v-chip>
-                        </div>
-                    </v-card-actions>
                     
                 </div>
 
