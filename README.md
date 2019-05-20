@@ -1,4 +1,6 @@
-# github
+# jr-rauxa-gh
+### Github Username Search by Jeff Roth
+See [Heroku App](https://jr-rauxa-gh.herokuapp.com/).
 
 ## Project setup
 ```
