@@ -56,8 +56,10 @@
                         </div>
                     </v-card-title>
                     <v-card-actions>
-                        <v-btn flat onclick="" id="profile">Profile</v-btn>
-                        <v-btn flat onclick="" id="repos">Repos</v-btn>
+                        <div class="text-xs-center">
+                            <v-chip id="profile">
+                            </v-chip>
+                        </div>
                     </v-card-actions>
                     
                 </div>
@@ -147,23 +149,14 @@
                         .then(response => {
                             axios.get('https://api.github.com/users/' + this.username + '/followers?per_page=100')
                                 .then(followers => {
-                                    //response.data.followers_list = followers.data;
                                     let pages = (response.data.followers < 100) ? 1 : Math.floor(response.data.followers/100);
                                     this.pages = pages;
-                                    console.log("Followers:", followers);
-                                    console.log("Response:", response.data);
-                                    //this.followers = followers.data.map( avatar => avatar.avatar_url);
                                     this.followers = followers.data;
                                     this.page = 1;
                                     this.results = response.data;
                                     this.error = '';
                                     this.loading = false;
                             });
-                        })
-                        .then(
-                            tags => {
-                                document.getElementById("profile").onclick = "location.href=\'" + this.results["html-url"] + "\'";
-                                document.getElementById("repos").onclick = "location.href=\'" + this.results["repos-url"] + "\'";
                         })
                         .catch(error => {
                             this.results = '';
@@ -187,10 +180,7 @@
                 if ( this.pages > 1 && this.page < this.pages) {
                     axios.get('https://api.github.com/users/' + this.username + '/followers?per_page=100&page=' + this.page)
                         .then(followers_next => {
-                            //response.data.followers_list.push(followers_next.data);
-                            console.log("Followers_next:", followers_next);
                             followers_next.data.forEach(follower => this.followers.push(follower));
-                            //this.followers.push(followers_next.data);
                     });
                 }
             }
