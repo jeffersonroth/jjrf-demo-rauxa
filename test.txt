@@ -1,0 +1,31 @@
+
+> github@0.1.0 test:unit /Users/mac/Documents/GitHub/jr-rauxa-gh
+> vue-cli-service test:unit
+
+ WEBPACK  Compiling...
+
+ DONE  Compiled successfully in 6703ms
+
+ WEBPACK  Compiled successfully in 6703ms
+
+ MOCHA  Testing...
+
+
+
+  Welcome.vue
+    ✓ renders props.msg when passed
+
+  Functional.vue
+    when the search button is
+      ✓ triggered
+    when the number of followers is
+search triggered
+loadmore null
+loadmore triggered
+      ✓ >100
+
+
+  3 passing (89ms)
+
+ MOCHA  Tests completed successfully
+

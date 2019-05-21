@@ -2,7 +2,8 @@ import { expect } from 'chai'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import sinon from 'sinon'
-import Functional from '@/views/Functional.vue'
+import Functional from '@/components/Functional.vue'
+import mrdoob from '@/assets/mrdoob.json'
 
 var chai = require("chai")
 var sinonChai = require("sinon-chai")
@@ -17,10 +18,15 @@ describe('Functional.vue', () => {
   let subject
 
   beforeEach(() => {
+    let givenuser = "mrdoob"
     store = new Vuex.Store({
       state: {}
     })
-    wrapper = shallowMount(Functional, { store, localVue })
+    //wrapper = shallowMount(Functional, { store, localVue })
+    //wrapper = shallowMount(Functional, { propsData: mrdoob.data })
+    wrapper = shallowMount(Functional, {
+      propsData: { givenuser }
+    })
     subject = wrapper.vm
     sinon.spy(subject, 'search')
     sinon.spy(subject, 'loadmore')

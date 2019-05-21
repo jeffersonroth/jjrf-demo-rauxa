@@ -32,7 +32,7 @@
                 ref="inputusername"
                 id="inputusername"
                 class="username"
-            ></v-text-field>
+            >{{ givenuser }}</v-text-field>
             <v-btn block v-on:click="search()" class="search" dark>Search</v-btn>
 
             <span class="loading" v-if="loading">Searching GitHub for "{{ username }}"...</span>
@@ -102,7 +102,7 @@
                     </v-flex>
                 </v-layout>
                 <div v-if="Math.floor(results.followers/100) > 1" id="loadmore">
-                    <v-btn block v-on:click="loadmore" dark>loadmore</v-btn>
+                    <v-btn block v-on:click="loadmore" class="loadmore" dark>loadmore</v-btn>
                 </div>
                 </v-container>
             </v-card>
@@ -116,9 +116,18 @@
 
 <script>
     import axios from 'axios';
+    
+    /**
+    if (this.givenuser) {
+        this.username = this.givenuser
+        this.search();
+    } */
 
     export default {
         name: 'Functional',
+        props: {
+            givenuser: String
+        },
         data () {
             return {
                 username: '',
@@ -187,9 +196,6 @@
 </script>
 
 <style>
-#main {
-    text-align: center;
-}
 *
 {
 text-align: center !important;
