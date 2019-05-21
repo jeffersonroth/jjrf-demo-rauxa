@@ -4,8 +4,6 @@ See [Heroku App](https://jr-rauxa-gh.herokuapp.com/).
 
 ## Briefing
 
-Fisrt contact with Vue.js
-
 Project created with vue-cli
 
 Github API requests made with Axios
@@ -19,23 +17,31 @@ Heroko Pipeline: Local Branch > Master Branch > Github Notification & Approval >
 
 ## Frontend
 
-As per request, the chosen Frontend framework was Vue.js
+As per request, the chosen Frontend framework was Vue.js. I had no previous experience with Vue.js but I studied the documentation and used my experience with other frameworks to complete the requested project.
 
-Helloword App were generated from the vue-cli command.
+App was generated from the vue-cli command.
 
-Home.vue addapted to be the Home page for the challenge, with hyperlinks to the challenges official pages and author's social media.
+Home.vue adapted to be the Home page for the challenge with a functional answer for the challenge.
 
-Router created for Functional Challenge and Test Page.
+Router created for About Page.
 
-Functional.vue renders a input field to enter the username to be requested by Github API. If a username is given, Axios will request it on the API. If is there a match, the app will render the user's avatar image, the number of followers and their avatar images. In case the number of followers is higher than 100, a button to load more results will show.
+Home page renders an input field to enter the username to be requested by Github API. 
 
-Test.vue will render hyperlinks to the unit tests source code and results.
+If no username is given, a message saying the field id required will appear below the field.
+
+If a username is given, Axios will request it on the API. 
+
+If is there a match, the app will render the user's avatar image, the number of followers and their avatar images. In case the number of followers is higher than 100, a button to load more results will show.
+
+If the username has no followers, it won't render the followers list.
+
+Any empty, zero or null field won't be shown (Bio, Location, Number of Followers, Number of Following).
 
 
 
 ## Backend
 
-In order to host the app to Heroku, a Express server were created.
+In order to host the app to Heroku, a Express server was created.
 
 
 
@@ -55,20 +61,20 @@ Create a service that allows for a user to search for a GitHub username. On a su
 
 ### Challenges
 
-Calling the Github API to retrieve a username info was no challenge. The point here was to adapt how to render it to the browser. Vue.js documentation is clear and the generated example by vue-cli gave a clear path to fallow. The next step was to adapt the Vue components to work with the data and Vuetify to give it order and design.
+Calling the Github API to retrieve username info was no challenge. The point here was to adapt how to render it to the browser. Vue.js documentation is clear and the generated example by vue-cli gave a clear path to follow. The next step was to adapt the Vue components to work with the data and Vuetify to give it order and design.
 
 ### Solution
 
-I'm really used to use Axios for API calls. Fortunatelly it integrates well with Vue.js. All scenarios were taken into account (no username given, matching and non existing usernames) so the template could work with the data. v-if's and v-for's were enough to present all the data I wanted to present in the browser.
+I'm really used to use Axios for API calls. Happily, it integrates well with Vue.js. All scenarios were taken into account (no username is given, matching and non-existing usernames) so the template could work with the data. v-if's and v-for's were enough to present all the data I wanted to present in the browser.
 
 
 ## Future - If I were to continue with the project, I would:
 
-- Present similar results for non matching usernames;
-- A way to export the followers list (it seems to be important here) and their information (bio, username, id, login, followers etc);
+- Present similar results for non-matching usernames;
+- A way to export the followers' list (it seems to be important here) and their information (bio, username, id, login, followers, etc);
 - No only present the avatar images, but the images would redirect to the user's profile;
 - For a match, show the followers in common with me;
-- More actions: follow, see repos etc.
+- More actions: follow, see repos, etc.
 
 
 ## Project setup
