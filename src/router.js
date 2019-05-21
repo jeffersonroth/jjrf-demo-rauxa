@@ -14,20 +14,12 @@ export default new Router({
       component: Home
     },
     {
-      path: '/functional',
-      name: 'functional',
-      // route level code-splitting
-      // this generates a separate chunk (functional.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "functional" */ './views/Functional.vue')
-    },
-    {
-      path: '/test',
-      name: 'test',
+      path: '/about',
+      name: 'about',
       // route level code-splitting
       // this generates a separate chunk (test.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "test" */ './views/Test.vue')
+      component: () => import(/* webpackChunkName: "test" */ './views/About.vue')
     }
   ]
 })

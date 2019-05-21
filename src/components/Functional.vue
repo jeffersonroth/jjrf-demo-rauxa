@@ -4,19 +4,19 @@
     <h1>Functional spec</h1>
     <p>
       Prototype the following project:
+    </p>
     <h3>GitHub Followers</h3>
     Create a service that allows for a user to search for a GitHub username. On a successful search return, display the user's GitHub handle, follower count, and a list of the user's followers (just the avatar is fine). Since some users (e.g. mrdoob, holman, etc.) have many thousands of followers, GitHub only returns a portion of the followers with each request. Create a "load more" button that, when clicked, fetches the next payload of followers. This button should persist until there are no more pages of followers to fetch.
-    </br>
+    <br/>
     -
-    </br>
+    <br/>
     Information on the GitHub API is available here: 
       <a href="https://developer.github.com/v3/" target="_blank" rel="noopener">GitHub API</a>.
-    </br>
+    <br/>
     -
-    </br>
+    <br/>
     The UX/UI is totally up to you. If you like, get creative and add additional features a user might find useful!
       <a href="https://github.com/RauxaRepo/Rauxa-UI-Code-Challenge/blob/master/coding_guidelines.md" target="_blank" rel="noopener">Coding Guidelines can be found here</a>.
-    </p>
 
     <h1>Try out:</h1>
 
@@ -118,6 +118,7 @@
     import axios from 'axios';
 
     export default {
+        name: 'Functional',
         data () {
             return {
                 username: '',

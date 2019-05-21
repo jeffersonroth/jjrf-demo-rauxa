@@ -1,18 +1,16 @@
 <template>
   <div class="home">
-    <img alt="Jeff Roth logo" src="../assets/logo.png">
-    <HelloWorld msg="Tereguahê porãke / Welcome to Github Username Search App by Jeff Roth"/>
+    <Functional/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Functional from '@/components/Functional.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Functional
   }
 }
 </script>
