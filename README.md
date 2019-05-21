@@ -4,8 +4,6 @@ See [Heroku App](https://jr-rauxa-gh.herokuapp.com/).
 
 ## Briefing
 
-Fisrt contact with Vue.js
-
 Project created with vue-cli
 
 Github API requests made with Axios
@@ -19,17 +17,25 @@ Heroko Pipeline: Local Branch > Master Branch > Github Notification & Approval >
 
 ## Frontend
 
-As per request, the chosen Frontend framework was Vue.js
+As per request, the chosen Frontend framework was Vue.js. I had no previous experience with Vue.js but I studied  the documentation and used my experience with other frameworks to complete the requested project.
 
-Helloword App were generated from the vue-cli command.
+App was generated from the vue-cli command.
 
-Home.vue addapted to be the Home page for the challenge, with hyperlinks to the challenges official pages and author's social media.
+Home.vue addapted to be the Home page for the challenge with a functional answer for the challenge.
 
-Router created for Functional Challenge and Test Page.
+Router created for About Page.
 
-Functional.vue renders a input field to enter the username to be requested by Github API. If a username is given, Axios will request it on the API. If is there a match, the app will render the user's avatar image, the number of followers and their avatar images. In case the number of followers is higher than 100, a button to load more results will show.
+Home page renders a input field to enter the username to be requested by Github API. 
 
-Test.vue will render hyperlinks to the unit tests source code and results.
+If no username is given, a massage saying the field id required will appear bellow the field.
+
+If a username is given, Axios will request it on the API. 
+
+If is there a match, the app will render the user's avatar image, the number of followers and their avatar images. In case the number of followers is higher than 100, a button to load more results will show.
+
+If the username has no followers, it won't render the followers list.
+
+Any empty, zero or null field won't be shown (Bio, Location, Number of Followers, Number of Following).
 
 
 
